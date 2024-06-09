@@ -56,6 +56,16 @@ void menu(){
                 }
             }
             break;
+        case 4:
+            {
+                //modo simulado
+                int puntos;
+                puntos = jugarSimulado();
+                system("cls");
+                cout << "Bien! El jugador " << nombre ;
+                cout << " obtuvo " << puntos << " puntos"<< endl;
+                system("pause");
+            }
         case 0:
             return;
         }

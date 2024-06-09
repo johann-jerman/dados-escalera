@@ -13,8 +13,4 @@ void DibujarDados(int dados[]){
     std::cout << "*-------* *-------* *-------* *-------* *-------* *-------*\n";
 }
 
-void GeneradDadosModoPrueba(){
-
-}
-
 #endif // DICES_H_INCLUDED
