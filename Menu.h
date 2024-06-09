@@ -8,7 +8,7 @@ using namespace std;
 
 void menu(){
     int opcion;
-    string nombre;
+    string nombre = "player";
 
 
     while(true){
@@ -34,6 +34,7 @@ void menu(){
         case 2:
             {
                 int puntos;
+                system("cls");
                 puntos = jugar();
 
                 system("cls");

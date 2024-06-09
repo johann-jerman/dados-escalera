@@ -3,39 +3,65 @@
 #include "Game.h"
 #include "Utils.h"
 #include "Dices.h"
+#include "Player.h"
 int jugar();
 int lanzar();
 
 using namespace std;
 
-void cargarAleatorio(int v[], int tam, int limite){
-  int i;
-  srand(time(NULL));
-  for( i=0; i<tam; i++ ){
-        v[i]=(rand()%limite)+1;
-  }
-}
-
 int jugar(){
     int numero[6];
     int rondas = 1, intentos = 0;
-    int puntajeMaximo = 0, puntajeMaximoRonda = 0;
+    int puntajeTotal = 0, puntajeRonda = 0, puntajeIntento = 0;
 
     while(true){
+        system("cls");
         intentos++;
 
+        //generamos los dados aleatorios
         cargarAleatorio(numero, 6, 6);
-        DibujarDados(numero);
+
+        bool dadosIguales = sonIguales(numero, 6);
+        bool dadosEscalera = esEscalera(numero, 6);
         //ver si es escalera
-        //6 iguales -> si son 6 puntos es 0
+        if(dadosEscalera == 1){
+            puntajeTotal = puntajeParaGanar;
+        }
+        //todos los dados son iguales a 6
+        if(dadosIguales && numero[0] == 6){
+            puntajeTotal = 0;
+        }
+        //todos los dados son >= 5
+        if(dadosIguales && numero[0] != 6){
+            puntajeIntento = numero[0] * 10;
+        }
+        // los dados no son iguales ni escalera
+        if(!dadosIguales && !dadosEscalera){
+            puntajeIntento = sumaVector(numero, cantidadDados);
+        }
 
         //intentos x ronda
+        if(intentos <= 3 && puntajeIntento > puntajeRonda){
+            puntajeRonda = puntajeIntento;
+        }
+
+        imprimirCabezera(rondas, puntajeTotal, puntajeRonda, intentos, puntajeIntento);
+        DibujarDados(numero);
+
         if(intentos == 3){
-        //actualizamos el valor de los puntos maximos que tenemos
-
-        //definir si ganamos
+            //actualizamos el valor de los puntos maximos que tenemos
+            //actualizar la ronda y la cantidad de intentos
+            intentos = 0;
+            rondas++;
+            puntajeTotal += puntajeRonda;
+            puntajeRonda = 0;
+            puntajeIntento = 0;
+            //definir si ganamos
         };
-
+        if(puntajeTotal >= puntajeParaGanar){
+            return puntajeTotal;
+        }
+        //system("pause");
         system("pause");
     }
 }

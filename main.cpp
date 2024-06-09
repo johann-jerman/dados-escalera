@@ -11,8 +11,7 @@ using namespace std;
 int main() {
 
     menu();
-    srand(time(NULL));
-    srand(getpid());
+
     int dados[6];
     dados[0] = 5;
     dados[1] = 5;
@@ -20,8 +19,6 @@ int main() {
     dados[3] = 5;
     dados[4] = 5;
     dados[5] = 5;
-
-    //DibujarDados(dados);
 
     return 0;
 }

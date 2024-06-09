@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1717784702 source:c:\users\familia\desktop\utn\juegoutn\main.cpp
+1717887650 source:c:\users\familia\desktop\utn\juegoutn\main.cpp
 	<iostream>
 	<locale>
 	<codecvt>
@@ -8,16 +8,19 @@
 	"Utils.h"
 	"Dices.h"
 
-1717783078 c:\users\familia\desktop\utn\juegoutn\menu.h
+1717891400 c:\users\familia\desktop\utn\juegoutn\menu.h
 	"Game.h"
 
-1717786576 c:\users\familia\desktop\utn\juegoutn\utils.h
+1717889143 c:\users\familia\desktop\utn\juegoutn\utils.h
 
-1717785496 c:\users\familia\desktop\utn\juegoutn\dices.h
+1717887670 c:\users\familia\desktop\utn\juegoutn\dices.h
 	<string>
 
-1717786324 c:\users\familia\desktop\utn\juegoutn\game.h
+1717891373 c:\users\familia\desktop\utn\juegoutn\game.h
 	"Game.h"
 	"Utils.h"
 	"Dices.h"
+	"Player.h"
+
+1717890409 c:\users\familia\desktop\utn\juegoutn\player.h
 
