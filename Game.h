@@ -83,6 +83,11 @@ int jugarSimulado(){
             int valor;
             cout << "Ingrese el valor del dado numero " << i+1 << ": ";
             cin >> valor;
+            if(valor > 6 || valor < 1){
+                cout << "Debe ingresar un numero entre 1 y 6 \n";
+                i++;
+                continue;
+            }
             numero[i] = valor;
         }
 

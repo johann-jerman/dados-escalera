@@ -33,8 +33,10 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="Dices.h" />
+		<Unit filename="Game.h" />
 		<Unit filename="Menu.h" />
 		<Unit filename="Player.h" />
+		<Unit filename="Utils.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
