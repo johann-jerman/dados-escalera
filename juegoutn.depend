@@ -8,19 +8,20 @@
 	"Utils.h"
 	"Dices.h"
 
-1717935360 c:\users\familia\desktop\utn\juegoutn\menu.h
+1718217267 c:\users\familia\desktop\utn\juegoutn\menu.h
 	"Game.h"
+	"Player.h"
 
 1717889143 c:\users\familia\desktop\utn\juegoutn\utils.h
 
-1717887670 c:\users\familia\desktop\utn\juegoutn\dices.h
+1717940965 c:\users\familia\desktop\utn\juegoutn\dices.h
 	<string>
 
-1717938179 c:\users\familia\desktop\utn\juegoutn\game.h
+1718313867 c:\users\familia\desktop\utn\juegoutn\game.h
 	"Game.h"
 	"Utils.h"
 	"Dices.h"
 	"Player.h"
 
-1717890409 c:\users\familia\desktop\utn\juegoutn\player.h
+1718313903 c:\users\familia\desktop\utn\juegoutn\player.h
 

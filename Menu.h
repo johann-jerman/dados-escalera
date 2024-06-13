@@ -1,6 +1,7 @@
 #ifndef MENU_H_INCLUDED
 #define MENU_H_INCLUDED
 #include "Game.h"
+#include "Player.h"
 void menu();
 
 
@@ -8,13 +9,14 @@ using namespace std;
 
 void menu(){
     int opcion;
-    string nombre = "player";
+
 
 
     while(true){
         system("cls");
         if(nombre != ""){
             cout << "Hola " << nombre << endl;
+            cout << "------------------------------\n"<< endl;
         }
 
         cout << "1- Cargar Nombre" << endl;
@@ -27,7 +29,7 @@ void menu(){
 
         switch(opcion){
         case 1:
-            cout << "Ingrese nombre: ";
+            cout << "Ingrese nombre jugador 1: ";
             cin.ignore(); /// ignora el enter del cin anterior
             getline(cin, nombre);
             break;
@@ -46,14 +48,12 @@ void menu(){
         case 3:
             {
                 int puntos;
-                for(int i=1; i<=2; i++){
-                    puntos = jugar();
+                puntos = jugarDuo();
 
-                    system("cls");
-                    cout << "Bien! El jugador " << nombre ;
-                    cout << " obtuvo " << puntos << " puntos"<< endl;
-                    system("pause");
-                }
+                system("cls");
+                cout << "Bien! El jugador " << nombre << "Es el ganador \n" ;
+                cout << " obtuvo " << puntos << " puntos"<< endl;
+                system("pause");
             }
             break;
         case 4:
@@ -65,6 +65,16 @@ void menu(){
                 cout << "Bien! El jugador " << nombre ;
                 cout << " obtuvo " << puntos << " puntos"<< endl;
                 system("pause");
+            }
+        case 5:
+            {
+                         //modo simulado
+                int puntos;
+                puntos = jugarSimuladoDuo();
+                system("cls");
+                cout << " obtuvo " << puntos << " puntos"<< endl;
+                system("pause");
+
             }
         case 0:
             return;
