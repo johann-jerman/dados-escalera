@@ -30,6 +30,7 @@ int jugar(){
         //todos los dados son iguales a 6
         if(dadosIguales && numero[0] == 6){
             puntajeTotal = 0;
+            intentos = 3;
         }
         //todos los dados son >= 5
         if(dadosIguales && numero[0] != 6){
@@ -51,12 +52,13 @@ int jugar(){
         if(intentos == 3){
             //actualizamos el valor de los puntos maximos que tenemos
             //actualizar la ronda y la cantidad de intentos
+            system("pause");
             intentos = 0;
             rondas++;
             puntajeTotal += puntajeRonda;
+            imprimirFinalRonda(rondas, nombre, puntajeTotal, puntajeRonda);
             puntajeRonda = 0;
             puntajeIntento = 0;
-            imprimirFinalRonda(rondas, nombre, puntajeTotal, puntajeRonda);
             //definir si ganamos
         };
         if(puntajeTotal >= puntajeParaGanar){
@@ -97,6 +99,7 @@ int jugarDuo(){
           puntajeRondaJugador1 = puntajeParaGanar;
         } else if (dadosIguales && numero[0] == 6){
           puntajeTotalJugador1 = 0;
+          intentos = 3;
         } else if (dadosIguales && numero[0] != 6){
           puntajeIntentoJugador1 = numero[0] * 10;
         } else {
@@ -108,7 +111,7 @@ int jugarDuo(){
           puntajeRondaJugador1 = puntajeIntentoJugador1;
         }
 
-        // Mostrar informaci�n
+        // Mostrar informacion
         imprimirCabezera(rondas, puntajeTotalJugador1, puntajeRondaJugador1, intentos, puntajeIntentoJugador1, nombre);
         DibujarDados(numero);
         system("pause");
@@ -176,7 +179,6 @@ int jugarDuo(){
       return puntajeTotalJugador1 > puntajeTotalJugador2 ? puntajeTotalJugador1 : puntajeTotalJugador2;
     }
 
-    //system("pause");
     system("pause");
   }
 }
@@ -202,6 +204,7 @@ int jugarSimulado(){
             }
             numero[i] = valor;
         }
+        system("cls");
 
         bool dadosIguales = sonIguales(numero, 6);
         bool dadosEscalera = esEscalera(numero, 6);
@@ -212,6 +215,7 @@ int jugarSimulado(){
         //todos los dados son iguales a 6
         if(dadosIguales && numero[0] == 6){
             puntajeTotal = 0;
+            intentos = 3;
         }
         //todos los dados son >= 5
         if(dadosIguales && numero[0] != 6){
@@ -233,9 +237,11 @@ int jugarSimulado(){
         if(intentos == 3){
             //actualizamos el valor de los puntos maximos que tenemos
             //actualizar la ronda y la cantidad de intentos
+            system("pause");
             intentos = 0;
             rondas++;
             puntajeTotal += puntajeRonda;
+            imprimirFinalRonda(rondas, nombre, puntajeTotal, puntajeRonda);
             puntajeRonda = 0;
             puntajeIntento = 0;
             //definir si ganamos
@@ -278,7 +284,7 @@ int jugarSimuladoDuo(){
             }
             numero[i] = valor;
         }
-
+        system("cls");
         // Calcular puntuaciones
         bool dadosIguales = sonIguales(numero, 6);
         bool dadosEscalera = esEscalera(numero, 6);
@@ -298,7 +304,7 @@ int jugarSimuladoDuo(){
           puntajeRondaJugador1 = puntajeIntentoJugador1;
         }
 
-        // Mostrar informaci�n
+        // Mostrar informacion
         imprimirCabezera(rondas, puntajeTotalJugador1, puntajeRondaJugador1, intentos, puntajeIntentoJugador1, nombre);
         DibujarDados(numero);
         system("pause");
@@ -334,7 +340,7 @@ int jugarSimuladoDuo(){
             }
             numero[i] = valor;
         }
-
+        system("cls");
         // Calcular puntuaciones
         bool dadosIguales = sonIguales(numero, 6);
         bool dadosEscalera = esEscalera(numero, 6);
@@ -375,8 +381,6 @@ int jugarSimuladoDuo(){
       // Determinar ganador y mostrar mensaje final
       return puntajeTotalJugador1 > puntajeTotalJugador2 ? puntajeTotalJugador1 : puntajeTotalJugador2;
     }
-
-    //system("pause");
     system("pause");
   }
 }

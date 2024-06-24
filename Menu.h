@@ -16,7 +16,7 @@ void menu(){
         system("cls");
         if(nombre != ""){
             cout << "Hola " << nombre << endl;
-            cout << "------------------------------\n"<< endl;
+            cout << "------------------------------"<< endl;
         }
 
         cout << "1- Cargar Nombre" << endl;
@@ -29,10 +29,29 @@ void menu(){
 
         switch(opcion){
         case 1:
-            cout << "Ingrese nombre jugador 1: ";
-            cin.ignore(); /// ignora el enter del cin anterior
-            getline(cin, nombre);
-            break;
+            {
+                int number;
+                cout << "1- Cargar Nombre Jugador 1" << endl;
+                cout << "2- Cargar Nombre Jugador 2" << endl;
+                cout << "Opcion: ";
+                cin >> number;
+                if(number == 1){
+                    string a;
+                    cout << "ingrese el nombre del jugador 1: ";
+                    cin >> a;
+                    nombre = a;
+                }
+                if(number == 2){
+                    string a;
+                    cout << "ingrese el nombre del jugador 2: ";
+                    cin >> a;
+                    nombrePlayer2 = a;
+                }
+
+                cout << "Jugador 1 es: " << nombre << "\nJugador 2 es: " << nombrePlayer2 << "\n";
+                system("pause");
+                break;
+            }
         case 2:
             {
                 int puntos;
@@ -51,7 +70,7 @@ void menu(){
                 puntos = jugarDuo();
 
                 system("cls");
-                cout << "Bien! El jugador " << nombre << "Es el ganador \n" ;
+                cout << "Bien! El jugador " << nombre << " Es el ganador \n" ;
                 cout << " obtuvo " << puntos << " puntos"<< endl;
                 system("pause");
             }
@@ -68,7 +87,7 @@ void menu(){
             }
         case 5:
             {
-                         //modo simulado
+                //modo simulado Duo
                 int puntos;
                 puntos = jugarSimuladoDuo();
                 system("cls");

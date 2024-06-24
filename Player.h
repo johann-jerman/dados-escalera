@@ -6,6 +6,7 @@ using namespace std;
 string nombre = "Jugador";
 string nombrePlayer2 = "Jugador2";
 
+//imprimir cabezera pero sin el nombre
 void imprimirCabezera(
         int ronda,
         int puntajeTotal,
@@ -21,6 +22,8 @@ void imprimirCabezera(
     cout << "\n";
 
 }
+
+//sobreescribimos imprimir cabezera pero con el nombre
 void imprimirCabezera(
         int ronda,
         int puntajeTotal,
@@ -42,7 +45,7 @@ void imprimirFinalRonda(int ronda, string nombreJugador, int puntajeTotal, int p
     system("cls");
     cout << "------------------------------------\n";
     cout << "Ronda Numero " << ronda << "\n";
-    cout << "Nombre de jugador " << nombreJugador<< "\n";
+    cout << "Nombre de Jugador: " << nombreJugador<< "\n";
     cout << "Puntaje Total " << puntajeTotal << "\n";
     cout << "PuntajeRonda " << puntajeRonda << "\n";
     cout << "------------------------------------\n";
