@@ -36,16 +36,14 @@ void menu(){
                 cout << "Opcion: ";
                 cin >> number;
                 if(number == 1){
-                    string a;
                     cout << "ingrese el nombre del jugador 1: ";
-                    cin >> a;
-                    nombre = a;
+                    cin.ignore(); /// ignora el enter del cin anterior
+                    getline(cin, nombre);
                 }
                 if(number == 2){
-                    string a;
                     cout << "ingrese el nombre del jugador 2: ";
-                    cin >> a;
-                    nombrePlayer2 = a;
+                    cin.ignore(); /// ignora el enter del cin anterior
+                    getline(cin, nombrePlayer2);
                 }
 
                 cout << "Jugador 1 es: " << nombre << "\nJugador 2 es: " << nombrePlayer2 << "\n";
@@ -91,6 +89,7 @@ void menu(){
                 int puntos;
                 puntos = jugarSimuladoDuo();
                 system("cls");
+                cout << "Bien! El jugador " << nombre ;
                 cout << " obtuvo " << puntos << " puntos"<< endl;
                 system("pause");
 

@@ -167,9 +167,9 @@ int jugarDuo(){
 
       // Actualizar puntuaciones totales
       puntajeTotalJugador2 += puntajeRondaJugador2;
-      rondas++;
       // Cambiar de turno
       imprimirFinalRonda(rondas,nombrePlayer2, puntajeTotalJugador2,puntajeRondaJugador2);
+      rondas++;
       jugadorActual = nombre;
     }
 
@@ -199,7 +199,7 @@ int jugarSimulado(){
             cin >> valor;
             if(valor > 6 || valor < 1){
                 cout << "Debe ingresar un numero entre 1 y 6 \n";
-                i++;
+                i--;
                 continue;
             }
             numero[i] = valor;
@@ -279,7 +279,7 @@ int jugarSimuladoDuo(){
             cin >> valor;
             if(valor > 6 || valor < 1){
                 cout << "Debe ingresar un numero entre 1 y 6 \n";
-                i++;
+                i--;
                 continue;
             }
             numero[i] = valor;
@@ -335,7 +335,7 @@ int jugarSimuladoDuo(){
             cin >> valor;
             if(valor > 6 || valor < 1){
                 cout << "Debe ingresar un numero entre 1 y 6 \n";
-                i++;
+                i--;
                 continue;
             }
             numero[i] = valor;
